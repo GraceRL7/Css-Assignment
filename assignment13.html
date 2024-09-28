@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transitions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #222;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            margin: 20px;
+            background-color: #fde100;
+            transition: background-color 0.5s ease-in-out, width 0.5s ease-in-out;
+        }
+
+        .box:hover {
+            background-color: #ff5733;
+            width: 150px;
+        }
+
+        .text {
+            margin-top: 20px;
+            transition: color 0.5s ease-in-out 0.1s; /* Adding delay */
+        }
+
+        .box:hover + .text {
+            color: #ff5733;
+        }
+
+        .height-box {
+            width: 100px;
+            height: 100px;
+            margin: 20px;
+            background-color: #28a745;
+            transition: height 0.5s ease-in-out 0.2s; /* Delay for height transition */
+        }
+
+        .height-box:hover {
+            height: 200px;
+        }
+        
+        .width-box {
+            width: 100px;
+            height: 100px;
+            margin: 20px;
+            background-color: #007bff;
+            transition: width 0.5s ease-in-out; /* Width transition */
+        }
+
+        .width-box:hover {
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box"></div>
+    <div class="text">Hover over the box above!</div>
+
+    <div class="height-box"></div>
+    <div class="text">Hover over this green box!</div>
+
+    <div class="width-box"></div>
+    <div class="text">Hover over this blue box!</div>
+
+</body>
+</html>

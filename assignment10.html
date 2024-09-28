@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Images</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .container {
+            margin: 50px;
+        }
+        img {
+            max-width: 50%;
+            height: auto; 
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Responsive Images Example</h1>
+        <h2>Image 1</h2>
+        <img 
+            srcset="https://tse4.mm.bing.net/th?id=OIP.rvSWtRd_oPRTwDoTCmkP5gHaE8&pid=Api&P=0&h=180 600w,
+                    https://tse4.mm.bing.net/th?id=OIP.rvSWtRd_oPRTwDoTCmkP5gHaE8&pid=Api&P=0&h=360 1200w"
+            sizes="(max-width: 600px) 600px,
+                   (max-width: 1200px) 1200px,
+                   1800px"
+            src="https://tse4.mm.bing.net/th?id=OIP.rvSWtRd_oPRTwDoTCmkP5gHaE8&pid=Api&P=0&h=360"
+            alt="Responsive Image 1">
+        <h2>Image 2</h2>
+        <img 
+            srcset="Flowers.jpg 600w,
+            Flowers.jpg 1200w"
+            sizes="(max-width: 600px) 600px,
+                   (max-width: 1200px) 1200px,
+                   1800px"
+            src="Flowers.jpg"
+            alt="Responsive Image 2">
+        <h2>Image 3</h2>
+        <img 
+            srcset="https://tse4.mm.bing.net/th?id=OIP.gabnTIrb9_VUBujEuAZp1QHaEK&pid=Api&P=0&h=180 600w,
+                    https://tse4.mm.bing.net/th?id=OIP.gabnTIrb9_VUBujEuAZp1QHaEK&pid=Api&P=0&h=360 1200w"
+            sizes="(max-width: 600px) 600px,
+                   (max-width: 1200px) 1200px,
+                   1800px"
+            src="https://tse4.mm.bing.net/th?id=OIP.gabnTIrb9_VUBujEuAZp1QHaEK&pid=Api&P=0&h=360"
+            alt="Responsive Image 3">
+    </div>
+</body>
+</html>

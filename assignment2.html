@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+        background-color: rgb(0, 72, 91);
+        color: rgb(255, 255, 255);
+        text-align: center;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        padding: 30px;
+        }
+
+       .Gradient{
+        margin: 10px;
+        padding: 25px;
+        border-radius: 5px;
+        background: linear-gradient(to right, rgb(0, 178, 249), white);
+        transition: background 0.3s ease, transform 0.3s ease;
+        }
+        .Gradient:hover{
+            transform: scale(0.9);
+            background:linear-gradient(to right, white,rgb(218, 0, 214));
+        }
+        .Background-image{
+        text-align: center;
+        margin: 10px;
+        padding: 200px;
+        border-radius: 5px;
+        background-image: url(Flowers.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        }
+        div{
+        font-size: 20px;
+        }
+    </style>
+    <title>Color and Backgrounds</title>
+</head>
+<body>
+    <h2>Different color properties in CSS</h2>
+    <div class="Gradient">Color Gradient</div>
+    <div class="Background-image"><h5>Background image </h5></div>
+</body>
+</html>

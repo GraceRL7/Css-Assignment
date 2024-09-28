@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            padding: 20px;
+        }
+        .flex-container{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            background-color: rgb(0, 0, 0);
+            padding: 30px;
+            border-radius: 5px;
+        }
+        .box{
+            background-color: rgb(255, 255, 0);
+            padding: 30px;
+            border-radius: 5px;
+            width: 200px;
+            text-align: center;
+            transition: transform 0.6s ease;
+            color: rgb(0, 0, 0);
+        }
+        .box:hover{
+            transform: scale(1.1);
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+    <title>Flexbox Basics</title>
+</head>
+<body>
+    <h1>FLEXBOX BASICS</h1>
+    <div class="flex-container">
+        <div class="box">BOX 1</div>
+        <div class="box">BOX 2</div>
+        <div class="box">BOX 3</div>
+    </div>
+</body>
+</html>

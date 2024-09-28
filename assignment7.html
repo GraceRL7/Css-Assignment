@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Basics</title>
+    <style>
+        .grid-container{
+            display: grid;
+            grid-template-columns: repeat(2,1fr) ;
+            grid-gap:20px;
+            padding: 10px;
+        }
+        .grid-item{
+            display: grid;
+            grid-template-columns: repeat(2,1fr) ;
+            grid-gap: 10px;
+            background-color: rgb(251, 231, 6);
+            padding: 30px;
+            border-radius: 10px;
+            transition: transform 0.6s ease;
+        }
+        .grid-item:hover{
+            transform: scale(1.05);
+        }
+        .grid-item-row{
+            background-color: rgb(26, 26, 26);
+            padding: 20px;
+            text-align: center;
+            color: rgb(251, 231, 6) ;
+            border-radius: 10px;
+            transition: transform 0.6s ease;
+        }
+        .grid-item-row:hover{
+            transform: scale(0.9); 
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Grid Basics</h1>
+    <div class="grid-container">
+        <div class="grid-item">
+            <div class="grid-item-row">Column 1 - Row 1</div>
+            <div class="grid-item-row">Column 1 - Row 2</div>
+        </div>
+        <div class="grid-item">
+            <div class="grid-item-row">Column 2 - Row 1</div>
+            <div class="grid-item-row">Column 2 - Row 2</div>
+        </div>
+    </div>
+</body>
+</html>

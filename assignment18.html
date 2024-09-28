@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables Demo</title>
+    <style>
+        :root {
+            --primary-color: #007bff;
+            --secondary-color: #28a745;
+            --background-color: #222;
+            --text-color: #fff;
+            --font-size-small: 0.8em;
+            --font-size-normal: 1em;
+            --font-size-large: 1.5em;
+            --padding: 15px;
+            --margin: 20px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        button {
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            padding: var(--padding) 30px;
+            font-size: var(--font-size-large);
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .list {
+            margin: var(--margin) 0;
+            list-style-type: none;
+            padding: 0;
+            width: 300px;
+        }
+
+        .list li {
+            padding: var(--padding);
+            font-size: var(--font-size-normal);
+            transition: background-color 0.3s ease;
+        }
+
+        .list li:nth-child(even) {
+            background-color: #444;
+        }
+
+        .list li:hover {
+            background-color: var(--secondary-color);
+        }
+    </style>
+</head>
+<body>
+
+    <button>Hover Me!</button>
+
+    <ul class="list">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+    </ul>
+
+</body>
+</html>

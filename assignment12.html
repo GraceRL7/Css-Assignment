@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z-Index</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .box {
+            position: absolute;
+            transition: transform 0.3s, z-index 0.3s;
+        }
+
+        .box1 {
+            z-index: 1;
+            background-color: rgb(255, 251, 0);
+            height: 100px;
+            width: 100px;
+            top: 50px;
+            left: 50px;
+        }
+        .box2 {
+            z-index: 3;
+            background-color: rgb(30, 255, 1);
+            height: 100px;
+            width: 100px;
+            top: 0;
+            left: 100px;
+        }
+
+        .box3 {
+            z-index: 2;
+            background-color: rgb(255, 0, 0);
+            height: 100px;
+            width: 100px;
+            top: 100px;
+            left: 150px;
+        }
+        .box1:hover {
+            transform: scale(1.2); 
+            z-index: 4;
+        }
+
+        .box2:hover {
+            transform: scale(1.2);
+            z-index: 5;
+        }
+
+        .box3:hover {
+            transform: scale(1.2);
+            z-index: 6;
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+</body>
+</html>

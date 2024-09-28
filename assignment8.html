@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Grid Layout</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            color: aliceblue;
+            text-align: center;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: auto auto auto;
+            grid-template-areas:
+                "header header header"
+                "sidebar main ads"
+                "footer footer footer";
+            grid-gap: 20px;
+            padding: 20px;
+            background-color: #f0f0f0;
+            height: 100vh; 
+            border-radius: 5px;
+        }
+        .header {
+            grid-area: header;
+            background-color: rgb(0, 0, 0);
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            background-color: rgb(16, 99, 16);
+            padding: 20px;
+            border-radius: 5px;
+            transition: transform 0.6s ease;
+        }
+        .sidebar:hover{
+            transform: scale(0.9); 
+        }
+        .main {
+            grid-area: main;
+            background-color: rgb(156, 17, 144);
+            padding: 20px;
+            border-radius: 5px;
+            transition: transform 0.6s ease;
+        }
+        .main:hover{
+            transform: scale(0.9); 
+        }
+        .ads {
+            grid-area: ads;
+            background-color: rgb(122, 0, 0);
+            padding: 20px;
+            border-radius: 5px;
+            transition: transform 0.6s ease;
+        }
+        .ads:hover{
+            transform: scale(0.8); 
+        }
+
+        .footer {
+            grid-area: footer;
+            background-color: rgb(0, 0, 0);
+            padding: 20px;
+
+        }
+        .nested-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 10px;
+            background-color: white;
+            padding: 10px;
+        }
+        .nested-item {
+            background-color: #b99104;
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.6s ease;
+        }
+        .nested-item:hover{
+            transform: scale(0.9); 
+        }
+        .ads {
+            grid-column: 3 / 4;
+            grid-row: 2 / 4;
+        }
+        .footer {
+            grid-column: 1 / 4; 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="grid-container">
+        <div class="header">Header Area (Spans all columns)</div>
+        <div class="sidebar">Sidebar Area</div>
+        <div class="main">
+            Main Content Area
+            <div class="nested-grid">
+                <div class="nested-item">Nested Item 1</div>
+                <div class="nested-item">Nested Item 2</div>
+            </div>
+        </div>
+        <div class="ads">Ads Section (Spans 2 rows)</div>
+        <div class="footer">Footer Area (Spans all columns)</div>
+    </div>
+
+</body>
+</html>

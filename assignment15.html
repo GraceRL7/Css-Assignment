@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transforms Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #222;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #fde100;
+            margin: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .box:hover {
+            transform: translate(50px, 50px) rotate(45deg) scale(1.2) skew(10deg); /* Combine transforms on hover */
+        }
+
+        .rotate-box {
+            width: 100px;
+            height: 100px;
+            background-color: #28a745;
+            margin: 20px;
+            transform: rotate(45deg); /* Rotate on initial load */
+        }
+
+        .scale-box {
+            width: 100px;
+            height: 100px;
+            background-color: #007bff;
+            margin: 20px;
+            transition: transform 0.5s ease;
+        }
+
+        .scale-box:hover {
+            transform: scale(1.5); /* Scale on hover */
+        }
+
+        .skew-box {
+            width: 100px;
+            height: 100px;
+            background-color: #ff5733;
+            margin: 20px;
+            transition: transform 0.5s ease;
+        }
+
+        .skew-box:hover {
+            transform: skew(20deg); /* Skew on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">Hover Me!</div>
+    <div class="rotate-box">Rotated</div>
+    <div class="scale-box">Scale Me!</div>
+    <div class="skew-box">Skew Me!</div>
+
+</body>
+</html>
